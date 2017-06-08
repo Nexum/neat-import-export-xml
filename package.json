@@ -1,0 +1,24 @@
+{
+  "name": "neat-import-export-xml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nexum/neat-import-export-xml.git"
+  },
+  "author": "Dominik Kienzler <d.kienzler@dominik-kienzler.de>",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^1.3.0",
+    "speakingurl": "^13.0.0"
+  },
+  "peerDependencies": {
+    "bluebird": "^3.4.6",
+    "neat-base": "^1.x.x",
+    "neat-database": "^1.x.x"
+  }
+}
