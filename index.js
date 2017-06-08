@@ -367,6 +367,7 @@ module.exports = class Projection extends Module {
             let archive = archiver(this.config.archiver.method, this.config.archiver.options);
             let info = {
                 archive: archive,
+                knownFiles: [],
                 tmpDir: tmpDir,
                 folderName: folderName,
                 config: config,
@@ -453,7 +454,10 @@ module.exports = class Projection extends Module {
                     continue;
                 }
 
-                info.archive.file(filePath, {name: "images/" + fileName});
+                if (info.knownFiles.indexOf(fileName) === -1) {
+                    info.archive.file(filePath, {name: "images/" + fileName});
+                    info.knownFiles.push(fileName);
+                }
             }
         });
     }
