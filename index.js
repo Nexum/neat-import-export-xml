@@ -51,6 +51,8 @@ module.exports = class Projection extends Module {
 
     importFile(configName, file) {
         return new Promise((resolve, reject) => {
+            return reject(new Error("NOT IMPLEMENTED!!!"));
+
             let lineReader = readline.createInterface({
                 input: fs.createReadStream(path.resolve(path.join(Application.config.root_path, file)))
             });
