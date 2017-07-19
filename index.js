@@ -544,7 +544,9 @@ module.exports = class Projection extends Module {
 
             return config.files(doc, connectedFiles);
         }).then((files) => {
-            result.files = files;
+            if (config.files) {
+                result.files = files;
+            }
             return result;
         });
     }
